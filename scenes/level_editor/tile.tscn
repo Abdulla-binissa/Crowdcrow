@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvvbw8nlrj3rk"]
+
+[ext_resource type="Texture2D" uid="uid://s3nct3c6ikwm" path="res://assets/tiles/base-white.png" id="1_0k68w"]
+
+[node name="Tile" type="Control"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 177.0
+offset_bottom = 40.0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-13, -100)
+texture = ExtResource("1_0k68w")
+polygon = PackedVector2Array(14, 149, 101, 200, 187, 150, 187, 50, 101, 0, 14, 50)
