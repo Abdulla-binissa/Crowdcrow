@@ -9,7 +9,7 @@ func _ready() -> void:
 	
 func _generate_grid():
 	for x in range(grid_size):
-		var tile_coordinates := Vector3.ZERO
+		var tile_coordinates := Vector3.ZERO  # Coordinate for the next tile
 		tile_coordinates.x = x * TILE_SIZE * cos(deg_to_rad(30))
 		tile_coordinates.z = 0 if x % 2 == 0 else TILE_SIZE / 2
 		for y in range(grid_size):
@@ -18,4 +18,4 @@ func _generate_grid():
 			tile.translate(Vector3(tile_coordinates.x, tile_coordinates.y, tile_coordinates.z))
 			tile_coordinates.z += TILE_SIZE
 
-			tile.coordinates = Vector2(x, y)
+			tile.coordinates = Vector2(x, y)  # Set coordinate of tile
