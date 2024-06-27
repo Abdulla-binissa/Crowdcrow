@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dvvbw8nlrj3rk" path="res://scenes/level_editor/tile.tscn" id="1_rta5i"]
 
 [node name="PlaceableTiles" type="Node2D"]
+scale = Vector2(0.5, 0.5)
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 offset_right = 40.0
@@ -12,4 +13,13 @@ offset_bottom = 40.0
 layout_mode = 2
 
 [node name="Tile2" parent="HBoxContainer2" instance=ExtResource("1_rta5i")]
+layout_mode = 2
+
+[node name="Tile3" parent="HBoxContainer2" instance=ExtResource("1_rta5i")]
+layout_mode = 2
+
+[node name="Tile4" parent="HBoxContainer2" instance=ExtResource("1_rta5i")]
+layout_mode = 2
+
+[node name="Tile5" parent="HBoxContainer2" instance=ExtResource("1_rta5i")]
 layout_mode = 2
