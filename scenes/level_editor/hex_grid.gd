@@ -17,3 +17,5 @@ func _generate_grid():
 			add_child(tile)
 			tile.translate(Vector3(tile_coordinates.x, tile_coordinates.y, tile_coordinates.z))
 			tile_coordinates.z += TILE_SIZE
+
+			tile.coordinates = Vector2(x, y)
