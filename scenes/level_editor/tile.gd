@@ -1,6 +1,8 @@
 class_name Tile
 extends Node3D
 
+signal tile_clicked(tile)
+
 var models = {
 	1: preload("res://assets/tiles/hex_forest.glb"),
 	2: preload("res://assets/tiles/hex_rock.glb"),
@@ -14,7 +16,7 @@ var tile_id := 1
 func _on_area_3d_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print("Tile at coordinates ", coordinates, " clicked")
+			tile_clicked.emit(self)
 
 func update_tile():
 	# Free the current model if it exists

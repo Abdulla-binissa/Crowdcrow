@@ -1,5 +1,7 @@
 extends Node3D
 
+signal hex_grid_interacted(tile)
+
 const TILE_SIZE := 2.0
 const TILE = preload("res://scenes/level_editor/tile.tscn")
 @export var hex_grid_data: HexGridData
@@ -30,5 +32,7 @@ func generate_grid(data: HexGridData):
 		tile.coordinates = Vector2i(x, y)
 		tile.tile_id = id
 		tile.update_tile()
-
-
+		tile.connect('tile_clicked', _hex_grid_interacted)
+		
+func _hex_grid_interacted(tile):
+		hex_grid_interacted.emit(tile)
