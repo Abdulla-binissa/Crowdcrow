@@ -22,6 +22,8 @@ func _generate_grid(data: HexGridData):
 		var tile = TILE.instantiate()
 		add_child(tile)
 		tile.translate(Vector3(tile_coordinates.x, tile_coordinates.y, tile_coordinates.z))
-
+	
 		# Set the tile's coordinates
-		tile.coordinates = Vector2(x, y)
+		tile.coordinates = Vector2i(x, y)
+		tile.tile_id = id
+		tile.update_tile()
