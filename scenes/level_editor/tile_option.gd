@@ -34,3 +34,9 @@ func _ready():
 
 func update_texture():
 	texture_rect.texture = textures[selected_texture][selected_detail]["src"]
+
+
+func _on_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			print(textures[selected_texture][selected_detail]["id"])
