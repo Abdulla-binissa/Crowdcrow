@@ -1,5 +1,9 @@
 extends Node3D
 
+var selected_tile_id := 1
+
+@onready var hex_grid = $HexGrid
+
 func _ready():
 		# Get all TileOption nodes
 	var tile_options = get_tree().get_nodes_in_group("tile_options")
@@ -9,4 +13,9 @@ func _ready():
 		tile_option.connect('tile_selected', _on_tile_selected)
 
 func _on_tile_selected(tile_id):
+	selected_tile_id = tile_id
 	print("Tile selected with ID: %d" % tile_id)
+
+func _update_hex_grid(data: HexGridData):
+	
+	hex_grid.generate_grid(data)

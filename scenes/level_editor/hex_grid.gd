@@ -5,9 +5,12 @@ const TILE = preload("res://scenes/level_editor/tile.tscn")
 @export var hex_grid_data: HexGridData
 
 func _ready() -> void:
-	_generate_grid(hex_grid_data)
+	generate_grid(hex_grid_data)
 	
-func _generate_grid(data: HexGridData):
+func generate_grid(data: HexGridData):
+	for child in get_children(): # Remove all the children
+		child.queue_free()
+
 	for key in data.grid_dict.keys():
 		var x = key.x
 		var y = key.y
@@ -27,3 +30,5 @@ func _generate_grid(data: HexGridData):
 		tile.coordinates = Vector2i(x, y)
 		tile.tile_id = id
 		tile.update_tile()
+
+
