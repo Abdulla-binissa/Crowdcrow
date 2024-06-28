@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://qbkxdfcq0f2j"]
+
+[ext_resource type="Texture2D" uid="uid://ckjdj73cvqwlm" path="res://assets/images/hex_forest.png" id="1_egh82"]
+
+[node name="TileOption" type="Panel"]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_egh82")
+expand_mode = 1
+stretch_mode = 5

@@ -7,7 +7,6 @@
 points = PackedVector3Array(-0.577, 0, 1, -0.577, 1, 1, 0.577, 0, 1, 0.577, 1, 1, -0.577, 0, -1, -0.577, 1, -1, 0.577, 0, -1, 0.577, 1, -1, 1.154, 0, 0, 1.154, 1, 0, -1.154, 0, 0, -1.154, 1, 0)
 
 [node name="Tile" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00811863, -0.00615478, 0.00133801)
 script = ExtResource("1_4ntv1")
 
 [node name="Model" parent="." instance=ExtResource("2_v4hi8")]
