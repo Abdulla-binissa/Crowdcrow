@@ -1,5 +1,7 @@
 extends Panel
 
+signal tile_selected(tile_id)
+
 @export_enum("Forest", "Rock", "Sand") var selected_texture: String = "Rock"
 @export_enum("base", "detail") var selected_detail: String = "base"
 
@@ -39,4 +41,4 @@ func update_texture():
 func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print(textures[selected_texture][selected_detail]["id"])
+			tile_selected.emit(textures[selected_texture][selected_detail]["id"])

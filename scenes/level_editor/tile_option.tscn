@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/level_editor/tile_option.gd" id="1_3cl55"]
 
-[node name="TileOption" type="Panel"]
+[node name="TileOption" type="Panel" groups=["tile_options"]]
 custom_minimum_size = Vector2(64, 64)
 offset_right = 40.0
 offset_bottom = 40.0
