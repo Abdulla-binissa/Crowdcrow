@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cn4m0h1o7v1tc"]
+[gd_scene load_steps=3 format=3 uid="uid://cn4m0h1o7v1tc"]
 
 [ext_resource type="Script" path="res://scenes/level_editor/hex_grid.gd" id="1_votxb"]
+[ext_resource type="Resource" uid="uid://brgvel4kxldda" path="res://data/level_1_map.tres" id="2_a0hso"]
 
 [node name="HexGrid" type="Node3D"]
 script = ExtResource("1_votxb")
+hex_grid_data = ExtResource("2_a0hso")
