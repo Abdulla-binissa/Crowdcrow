@@ -9,7 +9,7 @@ var models = {
 	3: preload("res://assets/tiles/hex_sand.glb"),
 }
 
-var coordinates := Vector2.ZERO
+var coordinates := Vector2i.ZERO
 var tile_id := 1
 
 @onready var model = $Model
