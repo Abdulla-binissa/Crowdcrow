@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="HexGridData" load_steps=2 format=3 uid="uid://brgvel4kxldda"]
+
+[ext_resource type="Script" path="res://scenes/level_editor/hex_grid_data.gd" id="1_ax6mu"]
+
+[resource]
+script = ExtResource("1_ax6mu")
+grid_size = 16
