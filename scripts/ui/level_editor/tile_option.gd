@@ -8,24 +8,24 @@ signal tile_selected(tile_id)
 var textures = {
 	"Forest": {
 		"base": {
-			"src": preload("res://assets/images/hex_forest.png"),
+			"src": preload("res://assets/images/ui/hex_forest.png"),
 			"id": 1
 			}, 
-		"detail": preload("res://assets/images/hex_forest_detail.png")
+		"detail": preload("res://assets/images/ui/hex_forest_detail.png")
 	},
 	"Rock": {
 		"base":	{
-			"src": preload("res://assets/images/hex_rock.png"),
+			"src": preload("res://assets/images/ui/hex_rock.png"),
 			"id": 2
 			},
-		"detail": preload("res://assets/images/hex_rock_detail.png")
+		"detail": preload("res://assets/images/ui/hex_rock_detail.png")
 	},
 	"Sand": {
 		"base": {
-			"src": preload("res://assets/images/hex_sand.png"),
+			"src": preload("res://assets/images/ui/hex_sand.png"),
 			"id": 3
 			},
-		"detail": preload("res://assets/images/hex_sand_detail.png")
+		"detail": preload("res://assets/images/ui/hex_sand_detail.png")
 	}
 }
 

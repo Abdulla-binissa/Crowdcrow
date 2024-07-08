@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckjdj73cvqwlm"
-path="res://.godot/imported/hex_forest.png-eaf0838dab51e5c5a10fb94c3a7948fb.ctex"
+uid="uid://d3edi07jqtgyl"
+path="res://.godot/imported/hex_rock_detail.png-b1a527d641a96e2dac4d1235224e3f09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/hex_forest.png"
-dest_files=["res://.godot/imported/hex_forest.png-eaf0838dab51e5c5a10fb94c3a7948fb.ctex"]
+source_file="res://assets/images/ui/hex_rock_detail.png"
+dest_files=["res://.godot/imported/hex_rock_detail.png-b1a527d641a96e2dac4d1235224e3f09.ctex"]
 
 [params]
 

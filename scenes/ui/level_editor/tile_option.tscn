@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qbkxdfcq0f2j"]
 
-[ext_resource type="Script" path="res://scenes/level_editor/tile_option.gd" id="1_3cl55"]
+[ext_resource type="Script" path="res://scripts/ui/level_editor/tile_option.gd" id="1_3cl55"]
 
 [node name="TileOption" type="Panel" groups=["tile_options"]]
 custom_minimum_size = Vector2(64, 64)
