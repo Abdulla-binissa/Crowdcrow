@@ -2,7 +2,27 @@
 
 This document outlines the structure of the Godot game project, detailing the purpose of each directory and its contents.
 
-## Project Structure
+## Current Project Structure
+
+```plaintext
+/project_root
+├── assets/                      # Images, models, audio, etc.
+│   ├── images/                  # Image files
+│   │   ├── ui/                  # UI images and icons
+│   ├── models/                  # 3D models
+│   │   ├── environment/         # Environment models (trees, rocks, etc.)
+│   |   │   ├── tiles/           # Hex tiles
+├── scenes/                      # Scene files
+│   ├── ui/                      # Scebe for UI elements
+|   |   ├── level_editor/        # Scene for the level editor
+├── scripts/                     # GDScript files
+│   ├── ui/                      # Scripts for UI elements
+|   |   ├── level_editor/        # Scripts for the level editor
+└── resources/                   # Resource files, including `.tres` and `.res`
+    └── levels/                  # All the levels 
+```
+
+## Example Project Structure
 
 ```plaintext
 /project_root
