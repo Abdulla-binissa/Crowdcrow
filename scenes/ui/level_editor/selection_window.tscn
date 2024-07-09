@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://doquj8p7vup0e"]
 
-[ext_resource type="PackedScene" uid="uid://qbkxdfcq0f2j" path="res://scenes/level_editor/tile_option.tscn" id="1_xj138"]
+[ext_resource type="PackedScene" uid="uid://qbkxdfcq0f2j" path="res://scenes/ui/level_editor/tile_option.tscn" id="1_xj138"]
 
 [node name="SelectionWindow" type="Panel"]
 offset_left = 644.0

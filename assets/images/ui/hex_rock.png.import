@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3edi07jqtgyl"
-path="res://.godot/imported/hex_rock_detail.png-27f03f67c47711d480a86793fd8f91be.ctex"
+uid="uid://3f47f6xooofl"
+path="res://.godot/imported/hex_rock.png-6a210a383673b902466409bd4f0ea6af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/hex_rock_detail.png"
-dest_files=["res://.godot/imported/hex_rock_detail.png-27f03f67c47711d480a86793fd8f91be.ctex"]
+source_file="res://assets/images/ui/hex_rock.png"
+dest_files=["res://.godot/imported/hex_rock.png-6a210a383673b902466409bd4f0ea6af.ctex"]
 
 [params]
 

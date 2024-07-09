@@ -14,6 +14,10 @@ config/name="crowd-crow"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="crowd-crow"
+
 [filesystem]
 
 import/fbx/enabled=false

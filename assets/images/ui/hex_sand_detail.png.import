@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yd5cyk2i6ct4"
-path="res://.godot/imported/hex_forest_detail.png-16115c3c8a3811e0fa8599e47a6300ad.ctex"
+uid="uid://b2llkcg3kqx4u"
+path="res://.godot/imported/hex_sand_detail.png-dafcf2d35e66c4ea215e4e5ffa43bce6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/hex_forest_detail.png"
-dest_files=["res://.godot/imported/hex_forest_detail.png-16115c3c8a3811e0fa8599e47a6300ad.ctex"]
+source_file="res://assets/images/ui/hex_sand_detail.png"
+dest_files=["res://.godot/imported/hex_sand_detail.png-dafcf2d35e66c4ea215e4e5ffa43bce6.ctex"]
 
 [params]
 

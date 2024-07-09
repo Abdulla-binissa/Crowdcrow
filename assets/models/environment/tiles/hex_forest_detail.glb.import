@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dy00ia3pfxiq7"
-path="res://.godot/imported/hex_sand_detail.glb-00677f162d03bb61a1b905bf4ccf332f.scn"
+uid="uid://r1jj1dl717lp"
+path="res://.godot/imported/hex_forest_detail.glb-0f15e7db672cb13a7f68a68435e04ecb.scn"
 
 [deps]
 
-source_file="res://assets/tiles/hex_sand_detail.glb"
-dest_files=["res://.godot/imported/hex_sand_detail.glb-00677f162d03bb61a1b905bf4ccf332f.scn"]
+source_file="res://assets/models/environment/tiles/hex_forest_detail.glb"
+dest_files=["res://.godot/imported/hex_forest_detail.glb-0f15e7db672cb13a7f68a68435e04ecb.scn"]
 
 [params]
 

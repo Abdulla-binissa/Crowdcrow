@@ -4,9 +4,9 @@ extends Node3D
 signal tile_clicked(tile)
 
 var models = {
-	1: preload("res://assets/tiles/hex_forest.glb"),
-	2: preload("res://assets/tiles/hex_rock.glb"),
-	3: preload("res://assets/tiles/hex_sand.glb"),
+	1: preload("res://assets/models/environment/tiles/hex_forest.glb"),
+	2: preload("res://assets/models/environment/tiles/hex_rock.glb"),
+	3: preload("res://assets/models/environment/tiles/hex_sand.glb"),
 }
 
 var coordinates := Vector2i.ZERO

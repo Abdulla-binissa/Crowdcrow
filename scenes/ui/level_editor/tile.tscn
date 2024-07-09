@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvvbw8nlrj3rk"]
 
-[ext_resource type="Script" path="res://scenes/level_editor/tile.gd" id="1_4ntv1"]
-[ext_resource type="PackedScene" uid="uid://xwhgoaike22x" path="res://assets/tiles/hex_forest.glb" id="2_plsiy"]
+[ext_resource type="Script" path="res://scripts/ui/level_editor/tile.gd" id="1_juobx"]
+[ext_resource type="PackedScene" uid="uid://xwhgoaike22x" path="res://assets/models/environment/tiles/hex_forest.glb" id="2_plsiy"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_anwys"]
 points = PackedVector3Array(-0.577, 0, 1, -0.577, 1, 1, 0.577, 0, 1, 0.577, 1, 1, -0.577, 0, -1, -0.577, 1, -1, 0.577, 0, -1, 0.577, 1, -1, 1.154, 0, 0, 1.154, 1, 0, -1.154, 0, 0, -1.154, 1, 0)
 
 [node name="Tile" type="Node3D"]
-script = ExtResource("1_4ntv1")
+script = ExtResource("1_juobx")
 
 [node name="Model" parent="." instance=ExtResource("2_plsiy")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
