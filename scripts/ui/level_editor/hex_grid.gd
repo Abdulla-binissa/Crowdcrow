@@ -3,7 +3,7 @@ extends Node3D
 signal hex_grid_interacted(tile)
 
 const TILE_SIZE := 2.0
-const TILE = preload("res://scenes/level_editor/tile.tscn")
+const TILE = preload("res://scenes/ui/level_editor/tile.tscn")
 @export var hex_grid_data: HexGridData
 
 func _ready() -> void:

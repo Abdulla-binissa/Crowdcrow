@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://wc8ya1yh1vqu"]
 
-[ext_resource type="Script" path="res://scenes/level_editor/level_editor.gd" id="1_4nh8c"]
-[ext_resource type="PackedScene" uid="uid://cn4m0h1o7v1tc" path="res://scenes/level_editor/hex_grid.tscn" id="1_hhaeo"]
-[ext_resource type="PackedScene" uid="uid://doquj8p7vup0e" path="res://scenes/level_editor/selection_window.tscn" id="2_000xt"]
-[ext_resource type="Resource" uid="uid://brgvel4kxldda" path="res://data/level_1_map.tres" id="3_tqcbn"]
+[ext_resource type="Script" path="res://scripts/ui/level_editor/level_editor.gd" id="1_4nh8c"]
+[ext_resource type="PackedScene" uid="uid://cn4m0h1o7v1tc" path="res://scenes/ui/level_editor/hex_grid.tscn" id="1_hhaeo"]
+[ext_resource type="PackedScene" uid="uid://doquj8p7vup0e" path="res://scenes/ui/level_editor/selection_window.tscn" id="2_000xt"]
+[ext_resource type="Resource" uid="uid://brgvel4kxldda" path="res://resources/levels/level_1_map.tres" id="3_tqcbn"]
 
 [node name="LevelEditor" type="Node3D"]
 script = ExtResource("1_4nh8c")
