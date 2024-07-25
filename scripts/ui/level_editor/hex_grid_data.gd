@@ -12,6 +12,11 @@ func _generate_grid_dictionary():
 	grid_dict.clear()
 	for y in range(grid_size):
 		for x in range(grid_size):
-			grid_dict[Vector2i(x, y)] = {"id": 1}
+			if x in range(6, 9) and y in range(6, 9):			
+				grid_dict[Vector2i(x, y)] = {"id": 2}
+			elif x in range(1, 15) and y in range(1, 15):			
+				grid_dict[Vector2i(x, y)] = {"id": 3}
+			else:
+				grid_dict[Vector2i(x, y)] = {"id": 1}
 			
 
