@@ -19,7 +19,7 @@ This document outlines the structure of the Godot game project, detailing the pu
 │   ├── ui/                      # Scripts for UI elements
 |   |   ├── level_editor/        # Scripts for the level editor
 └── resources/                   # Resource files, including `.tres` and `.res`
-    └── levels/                  # All the levels 
+	└── levels/                  # All the levels 
 ```
 
 ## Example Project Structure
@@ -59,10 +59,10 @@ This document outlines the structure of the Godot game project, detailing the pu
 │       ├── pathfinding.gd       # Pathfinding script
 │       └── helpers.gd           # Helper functions
 └── resources/                   # Resource files, including `.tres` and `.res`
-    ├── materials/               # Material resources
-    │   ├── shaders/             # Shader materials
-    │   └── standard/            # Standard materials
-    ├── prefabs/                 # Prefabricated objects
-    └── data/                    # Data resources
-        ├── tile_data.tres       # Tile data resource
-        └── level_data.tres      # Level data resource
+	├── materials/               # Material resources
+	│   ├── shaders/             # Shader materials
+	│   └── standard/            # Standard materials
+	├── prefabs/                 # Prefabricated objects
+	└── data/                    # Data resources
+		├── tile_data.tres       # Tile data resource
+		└── level_data.tres      # Level data resource
