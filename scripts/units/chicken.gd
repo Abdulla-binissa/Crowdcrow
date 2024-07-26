@@ -3,34 +3,38 @@ extends Node3D
 class_name Chicken
 
 # Variables
-var current_hex_coordinate: Vector2
-var acceleration: float
+var current_hex_coordinate: Vector3
+var next_hex_coordinate: Vector3
+#var acceleration: float
 var direction: int
 var velocity: float
 
 # Constants
+const TILE_WIDTH = 2.0
+const TILE_HEIGHT = 2.0
 const HEX_DIRECTIONS = [
-	Vector2(1, 0), Vector2(1, -1), Vector2(0, -1),
-	Vector2(-1, 0), Vector2(-1, 1), Vector2(0, 1)
+	Vector3(1, 1, 0), Vector3(1, 1, -1), Vector3(0, 1, -1),
+	Vector3(-1, 1, 0), Vector3(-1, 1, 1), Vector3(0, 1, 1)
 ]
 
-# Constructor
-func _init(x: int, y: int, acc: float = 0.0, dir: int = 0, vel: float = 0.0):
-	current_hex_coordinate = Vector2(x, y)
-	acceleration = acc
-	direction = dir
-	velocity = vel
-	position = hex_to_translation(current_hex_coordinate)
-	print("Initialized at Hex: ", current_hex_coordinate)
+# Utility: Convert hex coordinate to 3D translation
+func hex_to_translation(hex: Vector3) -> Vector3:
+	var x = TILE_WIDTH * (hex.x + 0.5 * (int(hex.z) & 1))
+	var z = TILE_HEIGHT * 0.75 * hex.z
+	return Vector3(x, 1, z)
+
+# Utility: Convert 3D translation to hex coordinate
+func translation_to_hex(trans: Vector3) -> Vector3:
+	var q = (trans.x * 2/3) / TILE_WIDTH
+	var r = (-trans.x / 3 + sqrt(3)/3 * trans.z) / TILE_HEIGHT
+	return Vector3(round(q), 1, round(r))
 
 # Walk method
 func walk():
-	velocity += acceleration
-	var next_hex_coordinate = current_hex_coordinate + HEX_DIRECTIONS[direction] * velocity
-	current_hex_coordinate = next_hex_coordinate
-	position = hex_to_translation(current_hex_coordinate)
-	print("Walked to Hex: ", current_hex_coordinate)
-
+	var direction_vector = HEX_DIRECTIONS[direction]
+	next_hex_coordinate = current_hex_coordinate + direction_vector
+	print("Walking to Hex: ", next_hex_coordinate)
+	
 # Turn left method
 func turn_left():
 	direction = int((direction - 1) % 6)
@@ -43,33 +47,35 @@ func turn_right():
 	direction = int((direction + 1) % 6)
 	print("Turned right. New direction: ", direction)
 
-# Utility: Convert hex coordinate to 3D translation
-func hex_to_translation(hex: Vector2) -> Vector3:
-	var x = TILE_WIDTH * (hex.x + 0.5 * (int(hex.y) & 1))
-	var z = TILE_HEIGHT * 0.75 * hex.y
-	return Vector3(x, 1, z)  # Assuming y is height in 3D space
 
-# Utility: Convert 3D translation to hex coordinate
-func translation_to_hex(trans: Vector3) -> Vector2:
-	var q = (trans.x * 2/3) / TILE_WIDTH
-	var r = (-trans.x / 3 + sqrt(3)/3 * trans.z) / TILE_HEIGHT
-	return Vector2(round(q), round(r))
-
-# Constants for tile dimensions (adjust these based on your hex tile size)
-const TILE_WIDTH = 64
-const TILE_HEIGHT = 64
-
-# Example function to demonstrate movement
-func _ready():
-	_init(0, 0, 1, 0, 1)
-	# Calling walk() to check if movement logic works
-	print("Initial Hex Coordinate: ", current_hex_coordinate)
+# Called when the node enters the scene tree for the first time.
+func _ready():	
+	current_hex_coordinate = translation_to_hex(global_transform.origin)
+	#acceleration = 0.001
+	direction = 1
+	velocity = 0.1
+	print("Initialized at Hex: ", current_hex_coordinate)
+	
+	## Test: should move one square in whatever direction its facing
 	walk()
-	print("Current Hex Coordinate after walk: ", current_hex_coordinate)
-	turn_left()
-	walk()
-	print("Current Hex Coordinate after turn left and walk: ", current_hex_coordinate)
 
-# Continuous movement for testing
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	walk()
+	var pos = global_transform.origin
+	var next_pos = hex_to_translation(next_hex_coordinate)
+	
+	if pos.distance_to(next_pos) > 0.1:
+		# Calculate the direction vector towards the next position
+		var direction_vector = (next_pos - pos).normalized()
+		
+		# Update the position based on velocity and delta
+		global_transform.origin += direction_vector * velocity
+		
+		# Update the current hex coordinate
+		current_hex_coordinate = translation_to_hex(global_transform.origin)
+		print("moving...", velocity, global_transform.origin, next_pos)
+	else:
+		# If close enough, snap to the next hex coordinate to avoid jitter
+		global_transform.origin = next_pos
+		current_hex_coordinate = next_hex_coordinate
+		print("Arrived at Hex: ", current_hex_coordinate)
