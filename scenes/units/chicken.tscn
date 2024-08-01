@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0lva5whgbj56"]
 
 [ext_resource type="Script" path="res://scripts/units/chicken.gd" id="1_plh7c"]
-[ext_resource type="PackedScene" uid="uid://bj6wushvclcgw" path="res://assets/models/units/placeholder.glb" id="1_qi4aj"]
+[ext_resource type="PackedScene" uid="uid://chhy1h58y3d58" path="res://assets/models/units/chicken-joined.glb" id="2_j2auq"]
 
 [node name="Chicken" type="Node3D"]
 script = ExtResource("1_plh7c")
 
-[node name="placeholder" parent="." instance=ExtResource("1_qi4aj")]
+[node name="ChickenModel" parent="." instance=ExtResource("2_j2auq")]
